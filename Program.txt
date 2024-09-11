@@ -1,0 +1,24 @@
+import random as rd
+upper_limit=int(input("enter the upper limit"))
+lower_limit=int(input("enter the lower limit"))
+
+random_number=rd.randint(upper_limit,lower_limit)
+print("you have to choose number between upperlimit and lowerlimit",upper_limit,"and",lower_limit)
+
+chances=0
+while chances<=9:
+  chances+=1
+  guess=int(input("enter the guess :"))
+  if random_number==guess:
+    print("Congratulations you Genius",random_number)
+    break
+  elif guess<random_number:
+    print("Your values is Smaller")
+  elif guess>random_number:
+    print("larger")
+  if chances==8:
+    print(" Sorry Out of chance:")
+    print("the number is :",random_number)
+    print("\n better luck next time:")
+    break
+print("\n")
